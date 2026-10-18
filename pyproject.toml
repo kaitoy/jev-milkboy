@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jev-milkboy"
+version = "0.1.0"
+description = "Ask TypeSafe Jev whether each of Komaba's hints in Milkboy's cornflakes routine describes cornflakes."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "typesafe-sdk>=0.7.5",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+jev-milkboy = "jev_milkboy.main:main"
+
+[tool.setuptools]
+packages = ["jev_milkboy"]
